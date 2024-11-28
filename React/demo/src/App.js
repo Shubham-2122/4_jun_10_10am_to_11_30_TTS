@@ -7,6 +7,7 @@ import React from "react";
 import Boostrap from "./boostrap/Boostrap";
 import React_card from "./boostrap/React-card";
 import Footer from "./boostrap/Footer";
+import Main_State from "./State/Main-State";
 
 function App() {
   return (
@@ -29,9 +30,12 @@ function App() {
 
 
      {/* boostrap */}
-     <Boostrap />
+     {/* <Boostrap />
      <React_card />
-     <Footer />
+     <Footer /> */}
+
+     {/* state */}
+     <Main_State />
     </>
   );
 }
