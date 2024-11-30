@@ -31,6 +31,7 @@ export class Class_State extends Component {
         <button onClick={()=>this.setState({name:"Bhavik patel"})}> change name</button>
 
 
+
         <br />
         <br />
 

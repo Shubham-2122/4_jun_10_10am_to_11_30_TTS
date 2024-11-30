@@ -12,7 +12,7 @@ import Main_State from "./State/Main-State";
 function App() {
   return (
     <>
-      <h1>Hello App compo</h1>
+      {/* <h1>Hello App compo</h1> */}
 
       {/* component */}
       {/* <Class_compo /> */}
