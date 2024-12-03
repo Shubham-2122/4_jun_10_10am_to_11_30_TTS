@@ -8,6 +8,8 @@ import Boostrap from "./boostrap/Boostrap";
 import React_card from "./boostrap/React-card";
 import Footer from "./boostrap/Footer";
 import Main_State from "./State/Main-State";
+import Form from "./Form/Form";
+import Mutiinput from "./Form/Mutiinput";
 
 function App() {
   return (
@@ -35,7 +37,11 @@ function App() {
      <Footer /> */}
 
      {/* state */}
-     <Main_State />
+     {/* <Main_State /> */}
+
+     {/* form handling */}
+     {/* <Form /> */}
+     <Mutiinput />
     </>
   );
 }
