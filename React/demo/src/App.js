@@ -10,6 +10,8 @@ import Footer from "./boostrap/Footer";
 import Main_State from "./State/Main-State";
 import Form from "./Form/Form";
 import Mutiinput from "./Form/Mutiinput";
+import UseEffect1 from "./useEffect/UseEffect1";
+import UserTable from "./useEffect/UserTable";
 
 function App() {
   return (
@@ -41,7 +43,11 @@ function App() {
 
      {/* form handling */}
      {/* <Form /> */}
-     <Mutiinput />
+     {/* <Mutiinput /> */}
+
+     {/* UseEffect */}
+     {/* <UseEffect1 /> */}
+     <UserTable />
     </>
   );
 }

@@ -24,6 +24,7 @@ function Mutiinput() {
         cpassword: ""
     })
 
+    // onchnaghe
     const handlechnage = (e) => {
         setform({
          ...form,
@@ -32,6 +33,7 @@ function Mutiinput() {
         })
         console.log(form)
     }
+
 
 
     return (
@@ -48,7 +50,7 @@ function Mutiinput() {
 
                     <MDBInput wrapperClass='mb-4' name='name' value={form.name} onChange={handlechnage} label='Enter your name' id='form1' type='text' />
                     <MDBInput wrapperClass='mb-4' name='email' value={form.email} onChange={handlechnage} label='Email address' id='form1' type='email' />
-                    <MDBInput wrapperClass='mb-4' name='number1' value={form.number} onChange={handlechnage} label='Enter your phone' id='form1' type='tel' />
+                    <MDBInput wrapperClass='mb-4' name='number' value={form.number} onChange={handlechnage} label='Enter your phone' id='form1' type='tel' />
                     <MDBInput wrapperClass='mb-4' name='password' value={form.password} onChange={handlechnage} label='Password' id='form2' type='password' />
                     <MDBInput wrapperClass='mb-4' name='cpassword' value={form.cpassword} onChange={handlechnage} label='c Password' id='form1' type='password' />
 
