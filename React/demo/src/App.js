@@ -12,6 +12,7 @@ import Form from "./Form/Form";
 import Mutiinput from "./Form/Mutiinput";
 import UseEffect1 from "./useEffect/UseEffect1";
 import UserTable from "./useEffect/UserTable";
+import UserCard from "./useEffect/UserCard";
 
 function App() {
   return (
@@ -47,7 +48,8 @@ function App() {
 
      {/* UseEffect */}
      {/* <UseEffect1 /> */}
-     <UserTable />
+     {/* <UserTable /> */}
+     <UserCard />
     </>
   );
 }

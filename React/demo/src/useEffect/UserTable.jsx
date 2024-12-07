@@ -18,8 +18,6 @@ function UserTable() {
     }
 
 
-
-
     return (
         <div className='container'>
             <h1>Hello User data</h1>
