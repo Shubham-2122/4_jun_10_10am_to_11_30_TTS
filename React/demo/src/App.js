@@ -14,10 +14,15 @@ import UseEffect1 from "./useEffect/UseEffect1";
 import UserTable from "./useEffect/UserTable";
 import UserCard from "./useEffect/UserCard";
 import Main_Props from "./UseContext/Main_Props";
+import Home from "./Layout/Pages/Home";
+import About from "./Layout/Pages/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contact from "./Layout/Pages/Contact";
+import Help from "./Layout/Pages/Help";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       {/* <h1>Hello App compo</h1> */}
 
       {/* component */}
@@ -53,8 +58,17 @@ function App() {
      {/* <UserCard /> */}
 
      {/* use context */}
-     <Main_Props />
-    </>
+     {/* <Main_Props /> */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/help" element={<Help />} />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
