@@ -19,6 +19,9 @@ import About from "./Layout/Pages/About";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./Layout/Pages/Contact";
 import Help from "./Layout/Pages/Help";
+import Home1 from "./Layout/Pages/Home1";
+import Home2 from "./Layout/Pages/Home2";
+import LifeCycle from "./Layout/Pages/LifeCycle";
 
 function App() {
   return (
@@ -61,10 +64,14 @@ function App() {
      {/* <Main_Props /> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} >
+          <Route path="/home1" element={<Home1 />} />
+          <Route path="/home2" element={<Home2 />} />
+        </Route>
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/lifecycle" element={<LifeCycle />} />
 
       </Routes>
 
