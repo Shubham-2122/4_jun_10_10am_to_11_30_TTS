@@ -56,8 +56,8 @@ function Header() {
                                       <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Cars</a>
                                       <div className="dropdown-menu rounded-0 m-0">
                                           <NavLink to="/carlisting" className="dropdown-item">Car Listing</NavLink>
-                                          <a href="detail.html" className="dropdown-item">Car Detail</a>
-                                          <a href="booking.html" className="dropdown-item">Car Booking</a>
+                                          <NavLink to="/cardetail" className="dropdown-item">Car Detail</NavLink>
+                                          <NavLink to="/carbooking" className="dropdown-item">Car Booking</NavLink>
                                       </div>
                                   </div>
                                   <div className="nav-item dropdown">
@@ -67,7 +67,7 @@ function Header() {
                                           <a href="testimonial.html" className="dropdown-item">Testimonial</a>
                                       </div>
                                   </div>
-                                  <a href="contact.html" className="nav-item nav-link">Contact</a>
+                                  <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
                               </div>
                           </div>
                       </nav>
