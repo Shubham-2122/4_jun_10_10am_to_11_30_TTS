@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Coaman/Header'
 import Footer from '../Coaman/Footer'
+import axios from 'axios';
 
 function Carlisting() {
+
+    const [carlisting, setcarlisting] = useState([]);
+
+    useEffect(() => {
+        getdata()
+    }, [])
+
+    const getdata = async () => {
+        const res = await axios.get("http://localhost:3000/carlisting")
+        console.log(res.data)
+        setcarlisting(res.data)
+    }
+
     return (
         <div>
             <Header />
@@ -65,132 +79,36 @@ function Carlisting() {
                     <div className="container pt-5 pb-3">
                         <h1 className="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
                         <div className="row">
-                            <div className="col-lg-4 col-md-6 mb-2">
-                                <div className="rent-item mb-4">
-                                    <img className="img-fluid mb-4" src="img/car-rent-1.png" alt />
-                                    <h4 className="text-uppercase mb-4">Mercedes Benz R3</h4>
-                                    <div className="d-flex justify-content-center mb-4">
-                                        <div className="px-2">
-                                            <i className="fa fa-car text-primary mr-1" />
-                                            <span>2015</span>
-                                        </div>
-                                        <div className="px-2 border-left border-right">
-                                            <i className="fa fa-cogs text-primary mr-1" />
-                                            <span>AUTO</span>
-                                        </div>
-                                        <div className="px-2">
-                                            <i className="fa fa-road text-primary mr-1" />
-                                            <span>25K</span>
-                                        </div>
-                                    </div>
-                                    <a className="btn btn-primary px-3" href>$99.00/Day</a>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 mb-2">
-                                <div className="rent-item active mb-4">
-                                    <img className="img-fluid mb-4" src="img/car-rent-2.png" alt />
-                                    <h4 className="text-uppercase mb-4">Mercedes Benz R3</h4>
-                                    <div className="d-flex justify-content-center mb-4">
-                                        <div className="px-2">
-                                            <i className="fa fa-car text-primary mr-1" />
-                                            <span>2015</span>
-                                        </div>
-                                        <div className="px-2 border-left border-right">
-                                            <i className="fa fa-cogs text-primary mr-1" />
-                                            <span>AUTO</span>
-                                        </div>
-                                        <div className="px-2">
-                                            <i className="fa fa-road text-primary mr-1" />
-                                            <span>25K</span>
+                            {
+                                carlisting && carlisting.map((car,index)=>{
+                                    console.log(car)
+                                    const {title,carimg,MFG,type,Km,price} = car
+                                    return(
+                                        <div className="col-lg-4 col-md-6 mb-2">
+                                        <div className="rent-item mb-4">
+                                            <img className="img-fluid mb-4" src={carimg} alt />
+                                            <h4 className="text-uppercase mb-4">{title}</h4>
+                                            <div className="d-flex justify-content-center mb-4">
+                                                <div className="px-2">
+                                                    <i className="fa fa-car text-primary mr-1" />
+                                                    <span>{MFG}</span>
+                                                </div>
+                                                <div className="px-2 border-left border-right">
+                                                    <i className="fa fa-cogs text-primary mr-1" />
+                                                    <span>{type}</span>
+                                                </div>
+                                                <div className="px-2">
+                                                    <i className="fa fa-road text-primary mr-1" />
+                                                    <span>{Km}Km</span>
+                                                </div>
+                                            </div>
+                                            <a className="btn btn-primary px-3" href>${price}/Day</a>
                                         </div>
                                     </div>
-                                    <a className="btn btn-primary px-3" href>$99.00/Day</a>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 mb-2">
-                                <div className="rent-item mb-4">
-                                    <img className="img-fluid mb-4" src="img/car-rent-3.png" alt />
-                                    <h4 className="text-uppercase mb-4">Mercedes Benz R3</h4>
-                                    <div className="d-flex justify-content-center mb-4">
-                                        <div className="px-2">
-                                            <i className="fa fa-car text-primary mr-1" />
-                                            <span>2015</span>
-                                        </div>
-                                        <div className="px-2 border-left border-right">
-                                            <i className="fa fa-cogs text-primary mr-1" />
-                                            <span>AUTO</span>
-                                        </div>
-                                        <div className="px-2">
-                                            <i className="fa fa-road text-primary mr-1" />
-                                            <span>25K</span>
-                                        </div>
-                                    </div>
-                                    <a className="btn btn-primary px-3" href>$99.00/Day</a>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 mb-2">
-                                <div className="rent-item mb-4">
-                                    <img className="img-fluid mb-4" src="img/car-rent-4.png" alt />
-                                    <h4 className="text-uppercase mb-4">Mercedes Benz R3</h4>
-                                    <div className="d-flex justify-content-center mb-4">
-                                        <div className="px-2">
-                                            <i className="fa fa-car text-primary mr-1" />
-                                            <span>2015</span>
-                                        </div>
-                                        <div className="px-2 border-left border-right">
-                                            <i className="fa fa-cogs text-primary mr-1" />
-                                            <span>AUTO</span>
-                                        </div>
-                                        <div className="px-2">
-                                            <i className="fa fa-road text-primary mr-1" />
-                                            <span>25K</span>
-                                        </div>
-                                    </div>
-                                    <a className="btn btn-primary px-3" href>$99.00/Day</a>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 mb-2">
-                                <div className="rent-item mb-4">
-                                    <img className="img-fluid mb-4" src="img/car-rent-5.png" alt />
-                                    <h4 className="text-uppercase mb-4">Mercedes Benz R3</h4>
-                                    <div className="d-flex justify-content-center mb-4">
-                                        <div className="px-2">
-                                            <i className="fa fa-car text-primary mr-1" />
-                                            <span>2015</span>
-                                        </div>
-                                        <div className="px-2 border-left border-right">
-                                            <i className="fa fa-cogs text-primary mr-1" />
-                                            <span>AUTO</span>
-                                        </div>
-                                        <div className="px-2">
-                                            <i className="fa fa-road text-primary mr-1" />
-                                            <span>25K</span>
-                                        </div>
-                                    </div>
-                                    <a className="btn btn-primary px-3" href>$99.00/Day</a>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 mb-2">
-                                <div className="rent-item mb-4">
-                                    <img className="img-fluid mb-4" src="img/car-rent-6.png" alt />
-                                    <h4 className="text-uppercase mb-4">Mercedes Benz R3</h4>
-                                    <div className="d-flex justify-content-center mb-4">
-                                        <div className="px-2">
-                                            <i className="fa fa-car text-primary mr-1" />
-                                            <span>2015</span>
-                                        </div>
-                                        <div className="px-2 border-left border-right">
-                                            <i className="fa fa-cogs text-primary mr-1" />
-                                            <span>AUTO</span>
-                                        </div>
-                                        <div className="px-2">
-                                            <i className="fa fa-road text-primary mr-1" />
-                                            <span>25K</span>
-                                        </div>
-                                    </div>
-                                    <a className="btn btn-primary px-3" href>$99.00/Day</a>
-                                </div>
-                            </div>
+                                    )
+                                })
+                            }
+                            
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,8 @@ import NotFound from "./Website/layout/NotFound";
 import Cardetils from "./Website/layout/Cardetils";
 import Carbooking from "./Website/layout/Carbooking";
 import Contact from "./Website/layout/Contact";
+import Adashboard from "./Admin/Apages/Adashboard";
+import AcarlistingMange from "./Admin/Apages/AcarlistingMange";
 
 function App() {
   return (
@@ -26,6 +28,11 @@ function App() {
 
       {/*  * not path location */}
         <Route path="*" element={<NotFound />} />
+
+
+        {/* admin hide */}
+        <Route path="/dashboard" element={<Adashboard />} />
+        <Route path="/carmange" element={<AcarlistingMange />} />
       </Routes>
       
     </div>
