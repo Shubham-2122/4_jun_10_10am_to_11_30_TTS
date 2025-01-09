@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Coaman/Header'
 import Footer from '../Coaman/Footer'
+import Silderdata from '../Coaman/Silderdata'
 
 function Service() {
     return (
@@ -52,14 +53,8 @@ function Service() {
                 </div>
                 {/* Search End */}
                 {/* Page Header Start */}
-                <div className="container-fluid page-header">
-                    <h1 className="display-3 text-uppercase text-white mb-3">Service</h1>
-                    <div className="d-inline-flex text-white">
-                        <h6 className="text-uppercase m-0"><a className="text-white" href>Home</a></h6>
-                        <h6 className="text-body m-0 px-3">/</h6>
-                        <h6 className="text-uppercase text-body m-0">Service</h6>
-                    </div>
-                </div>
+               
+                <Silderdata data="Service" data1="Service" />
                 {/* Page Header Start */}
                 {/* Services Start */}
                 <div className="container-fluid py-5">

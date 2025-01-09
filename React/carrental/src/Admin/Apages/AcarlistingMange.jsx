@@ -11,10 +11,18 @@ function AcarlistingMange() {
         getdata()
     }, [])
 
+    // read data
     const getdata = async () => {
         const res = await axios.get("http://localhost:3000/carlisting")
         console.log(res.data)
         setcarlisting(res.data)
+    }
+
+    // delete function
+    const deletedata = async(id)=>{
+        const res = await axios.delete(`http://localhost:3000/carlisting/${id}`)
+        console.log(res.data)
+        getdata()
     }
 
 
@@ -78,7 +86,7 @@ function AcarlistingMange() {
                                             <MDBBtn color='success' className='mx-1' rounded size='sm'>
                                                 Edit
                                             </MDBBtn>
-                                            <MDBBtn color='danger' rounded size='sm'>
+                                            <MDBBtn color='danger' onClick={()=>deletedata(car.id)} rounded size='sm'>
                                                 Delete
                                             </MDBBtn>
                                         </td>

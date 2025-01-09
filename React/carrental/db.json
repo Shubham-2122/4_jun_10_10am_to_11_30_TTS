@@ -1,75 +1,93 @@
 {
-    "admin":[
-        {
-            "id":1,
-            "name":"admin",
-            "email":"admin@gmail.com",
-            "phone":982356256,
-            "password":"123456"
-        }
-    ],
-    "users":[
-        {
-            "id":1,
-            "name":"user1",
-            "email":"user1@gmail.com",
-            "password":"123456",
-            "img":"https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"828738667"
-        },
-        {
-            "id":2,
-            "name":"user2",
-            "email":"user2@gmail.com",
-            "password":"456",
-            "img":"https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"24324235"
-        },
-        {
-            "id":3,
-            "name":"user3",
-            "email":"user3@gmail.com",
-            "password":"3456",
-            "img":"https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "phone":"535423423"
-        }
-    ],
-    "carlisting":[
-        {
-            "id":1,
-            "title":"Mercedes Benz R3",
-            "carimg":"https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "MFG":2015,
-            "type":"auto",
-            "Km":"25",
-            "price":90
-        },
-        {
-            "id":2,
-            "title":"1969 car",
-            "carimg":"https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "MFG":1969,
-            "type":"manual",
-            "Km":"10",
-            "price":9000
-        },
-        {
-            "id":3,
-            "title":"char bangdi",
-            "carimg":"https://images.pexels.com/photos/29930899/pexels-photo-29930899/free-photo-of-dynamic-luxury-cars-lined-up-for-race.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "MFG":2012,
-            "type":"auto",
-            "Km":"30",
-            "price":100
-        },
-        {
-            "id":4,
-            "title":"rolls royce",
-            "carimg":"https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "MFG":2021,
-            "type":"auto",
-            "Km":"20",
-            "price":10000
-        }
-    ]
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "phone": 982356256,
+      "password": "123456"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "password": "123456",
+      "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "phone": "828738667"
+    },
+    {
+      "id": "2",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "456",
+      "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "phone": "24324235"
+    },
+    {
+      "id": "3",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "password": "3456",
+      "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "phone": "535423423"
+    }
+  ],
+  "carlisting": [
+    {
+      "id": "1",
+      "title": "Mercedes Benz R3",
+      "carimg": "https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "MFG": 2015,
+      "type": "auto",
+      "Km": "25",
+      "price": 90
+    },
+    {
+      "id": "2",
+      "title": "1969 car",
+      "carimg": "https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "MFG": 1969,
+      "type": "manual",
+      "Km": "10",
+      "price": 9000
+    },
+    {
+      "id": "3",
+      "title": "char bangdi",
+      "carimg": "https://images.pexels.com/photos/29930899/pexels-photo-29930899/free-photo-of-dynamic-luxury-cars-lined-up-for-race.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "MFG": 2012,
+      "type": "auto",
+      "Km": "30",
+      "price": 100
+    },
+    {
+      "id": "4",
+      "title": "rolls royce",
+      "carimg": "https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "MFG": 2021,
+      "type": "auto",
+      "Km": "20",
+      "price": 10000
+    },
+    {
+      "id": "1736414509454",
+      "title": "addd",
+      "carimg": "https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "MFG": "2006",
+      "type": "Manual",
+      "Km": "45",
+      "price": "20002"
+    },
+    {
+      "id": "1736414621693",
+      "title": "asdas",
+      "carimg": "https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "MFG": "2007",
+      "type": "Auto",
+      "Km": "60",
+      "price": "2000"
+    }
+  ]
 }

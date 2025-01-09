@@ -10,6 +10,7 @@ import Carbooking from "./Website/layout/Carbooking";
 import Contact from "./Website/layout/Contact";
 import Adashboard from "./Admin/Apages/Adashboard";
 import AcarlistingMange from "./Admin/Apages/AcarlistingMange";
+import CarListingAdd from "./Admin/Apages/CarListingAdd";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         {/* admin hide */}
         <Route path="/dashboard" element={<Adashboard />} />
         <Route path="/carmange" element={<AcarlistingMange />} />
+        <Route path="/caradd" element={<CarListingAdd />} />
       </Routes>
       
     </div>
