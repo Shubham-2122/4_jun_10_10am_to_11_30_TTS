@@ -32,6 +32,24 @@
       "password": "3456",
       "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600",
       "phone": "535423423"
+    },
+    {
+      "id": "23",
+      "name": "het patel",
+      "email": "het@gmail.com",
+      "password": "123456",
+      "img": "https://images.pexels.com/photos/30225139/pexels-photo-30225139/free-photo-of-fashionable-young-man-posing-outdoors-in-urban-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "phone": "6359854231",
+      "status": "unblock"
+    },
+    {
+      "id": "1737625547470",
+      "name": "shubham jadav",
+      "email": "shubham.tops@gmail.com",
+      "password": "123455",
+      "img": "https://images.pexels.com/photos/30279856/pexels-photo-30279856/free-photo-of-elegant-sunset-wedding-couple-embrace.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "phone": "143",
+      "status": "unblock"
     }
   ],
   "carlisting": [
@@ -39,8 +57,8 @@
       "id": "1",
       "title": "Mercedes Benz R3",
       "carimg": "https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "MFG": 2015,
-      "type": "auto",
+      "MFG": "2016",
+      "type": "Manual",
       "Km": "25",
       "price": 90
     },
@@ -72,21 +90,21 @@
       "price": 10000
     },
     {
-      "id": "1736414509454",
-      "title": "addd",
-      "carimg": "https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "MFG": "2006",
-      "type": "Manual",
-      "Km": "45",
-      "price": "20002"
-    },
-    {
       "id": "1736414621693",
       "title": "asdas",
       "carimg": "https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=600",
       "MFG": "2007",
       "type": "Auto",
       "Km": "60",
+      "price": "2000"
+    },
+    {
+      "id": "1737451133519",
+      "title": "sadasdd",
+      "carimg": "https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "MFG": "2005",
+      "type": "Auto",
+      "Km": "52",
       "price": "2000"
     }
   ]

@@ -68,6 +68,7 @@ function Header() {
                                       </div>
                                   </div>
                                   <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
+                                  <NavLink to="/login" className="nav-item nav-link">login</NavLink>
                               </div>
                           </div>
                       </nav>

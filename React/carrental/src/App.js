@@ -11,6 +11,11 @@ import Contact from "./Website/layout/Contact";
 import Adashboard from "./Admin/Apages/Adashboard";
 import AcarlistingMange from "./Admin/Apages/AcarlistingMange";
 import CarListingAdd from "./Admin/Apages/CarListingAdd";
+import Register from "./Website/layout/Register";
+import Usermanger from "./Admin/Apages/Usermanger";
+import Loginpage from "./Website/layout/Loginpage"
+import Alogin from "./Admin/Apages/Alogin";
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
   return (
@@ -25,6 +30,8 @@ function App() {
         <Route path="/cardetail" element={<Cardetils />} />
         <Route path="/carbooking" element={<Carbooking />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Loginpage />} />
 
 
       {/*  * not path location */}
@@ -35,8 +42,10 @@ function App() {
         <Route path="/dashboard" element={<Adashboard />} />
         <Route path="/carmange" element={<AcarlistingMange />} />
         <Route path="/caradd" element={<CarListingAdd />} />
+        <Route path="/usermange" element={<Usermanger />} />
+        <Route path="/alogin" element={<Alogin />} />
       </Routes>
-      
+      <ToastContainer />
     </div>
     </BrowserRouter>
   );
