@@ -16,6 +16,7 @@ import Usermanger from "./Admin/Apages/Usermanger";
 import Loginpage from "./Website/layout/Loginpage"
 import Alogin from "./Admin/Apages/Alogin";
 import { ToastContainer, toast } from 'react-toastify';
+import EditProfile from "./Website/layout/EditProfile";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Loginpage />} />
+      <Route path="/edit" element={<EditProfile />} />
 
 
       {/*  * not path location */}

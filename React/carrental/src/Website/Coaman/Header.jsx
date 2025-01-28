@@ -1,7 +1,24 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function Header() {
+
+    const redirect = useNavigate()
+
+      useEffect(()=>{
+                if(!localStorage.getItem("userid")){
+                    redirect("/login")
+                }
+            })
+
+    const logout = ()=>{
+        localStorage.removeItem("userid")
+        localStorage.removeItem("username")
+        redirect("/login")
+        toast.success("Logout successfully")
+    }
+
   return (
     <div>
           <div>
@@ -68,7 +85,37 @@ function Header() {
                                       </div>
                                   </div>
                                   <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
-                                  <NavLink to="/login" className="nav-item nav-link">login</NavLink>
+                                
+                                  {(
+                                    ()=>{
+                                        if(localStorage.getItem("userid")){
+                                            return(
+                                                <>
+                                                    <NavLink to="/edit" className="nav-item nav-link">hello..{localStorage.getItem("username")}</NavLink>
+                                                </>
+                                            )
+                                        }
+                                    }
+                                  )()}
+
+                                  {(
+                                    ()=>{
+                                        if(localStorage.getItem('userid')){
+                                            return(
+                                                <>
+                                                    <NavLink onClick={logout} className="nav-item nav-link">Logout</NavLink>
+                                                </>
+                                            )
+                                        }
+                                        else{
+                                            return(
+                                                <>
+                                                  <NavLink to="/login" className="nav-item nav-link">login</NavLink>
+                                                </>
+                                            )
+                                        }
+                                    }
+                                  )()}
                               </div>
                           </div>
                       </nav>
