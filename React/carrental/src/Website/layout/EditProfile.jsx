@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     MDBBtn,
     MDBContainer,
@@ -14,8 +14,80 @@ import {
     from 'mdb-react-ui-kit';
 import Header from '../Coaman/Header';
 import Footer from '../Coaman/Footer';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 function EditProfile() {
+
+    const redirect = useNavigate()
+
+    const [data, setdata] = useState({
+        id: "",
+        name: "",
+        email: "",
+        password: "",
+        img: "",
+        phone: "",
+        status: ""
+    })
+
+    useEffect(() => {
+        fechdata()
+    }, [])
+
+    const fechdata = async () => {
+        try {
+            const res = await axios.get(`http://localhost:3000/users/${localStorage.getItem("userid")}`)
+            console.log(res.data)
+            setdata(res.data)
+
+        } catch (error) {
+            console.log("api data not found", error)
+        }
+    }
+
+    const handlechange = (e) => {
+        setdata({
+            ...data,
+            [e.target.name]: e.target.value
+        })
+        console.log(data)
+    }
+
+    const handleedit = async (e) => {
+        e.preventDefault()
+
+        try {
+
+            if (data.name.trim() === "" || data.email.trim() === "" 
+            || data.password.trim() === "" || data.img.trim() === "" || data.phone.trim() === ""){
+                console.log("pls fill first form")
+                toast.error("pls fill first form")
+                return false
+            }
+
+            const res = await axios.patch(`http://localhost:3000/users/${data.id}`,data)
+            console.log(res.data)
+
+            if(res.status == 200){
+                setdata({
+                    name: "",
+                    email: "",
+                    password: "",
+                    img: "",
+                    phone: "",
+                  });
+                  toast.success("Successfully edited")
+                  redirect("/")
+            }
+
+        } catch (error) {
+            console.log("Api data not Found")
+            toast.error("Api data not Found")
+        }
+    }
+
     return (
         <div>
             <Header />
@@ -26,32 +98,32 @@ function EditProfile() {
                         <MDBRow>
 
                             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
-                                <form action="" >
+                                <form action="" onSubmit={handleedit}>
 
                                     <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Update Profile data</p>
 
                                     <div className="d-flex flex-row align-items-center mb-4 ">
                                         <MDBIcon fas icon="user me-3" size='lg' />
-                                        <MDBInput label='Your Name' id='form1' type='text' className='w-100' />
+                                        <MDBInput value={data.name} name='name' onChange={handlechange} label='Your Name' id='form1' type='text' className='w-100' />
                                     </div>
 
                                     <div className="d-flex flex-row align-items-center mb-4">
                                         <MDBIcon fas icon="envelope me-3" size='lg' />
-                                        <MDBInput label='Your Email' id='form2' type='email' />
+                                        <MDBInput value={data.email} name='email' onChange={handlechange} label='Your Email' id='form2' type='email' />
                                     </div>
 
                                     <div className="d-flex flex-row align-items-center mb-4">
                                         <MDBIcon fas icon="lock me-3" size='lg' />
-                                        <MDBInput label='Password' name='password' id='form3'  type='password' />
+                                        <MDBInput value={data.password} onChange={handlechange} label='Password' name='password' id='form3' type='password' />
                                     </div>
                                     <div className="d-flex flex-row align-items-center mb-4">
                                         <MDBIcon fas icon="phone me-3" size='lg' />
-                                        <MDBInput label='your Images' name='img'  id='form4' type='url' />
+                                        <MDBInput value={data.img} onChange={handlechange} label='your Images' name='img' id='form4' type='url' />
                                     </div>
 
                                     <div className="d-flex flex-row align-items-center mb-4">
                                         <MDBIcon fas icon="phone me-3" size='lg' />
-                                        <MDBInput label='your phone number' name='phone'  id='form4' type='tel' />
+                                        <MDBInput value={data.phone} onChange={handlechange} label='your phone number' name='phone' id='form4' type='tel' />
                                     </div>
 
 

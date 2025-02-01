@@ -22,6 +22,8 @@ import Help from "./Layout/Pages/Help";
 import Home1 from "./Layout/Pages/Home1";
 import Home2 from "./Layout/Pages/Home2";
 import LifeCycle from "./Layout/Pages/LifeCycle";
+import Usereducer_fun from "./Hooks/Usereducer_fun";
+import UseRef from "./Hooks/UseRef";
 
 function App() {
   return (
@@ -72,7 +74,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/help" element={<Help />} />
         <Route path="/lifecycle" element={<LifeCycle />} />
-
+        <Route path="/reducer" element={<Usereducer_fun />} />
+        <Route path="/useref" element={<UseRef />} />
       </Routes>
 
     </BrowserRouter>

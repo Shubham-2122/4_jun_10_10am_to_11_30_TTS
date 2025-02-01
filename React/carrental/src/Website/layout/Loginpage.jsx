@@ -67,6 +67,11 @@ function Loginpage() {
                 return false
             }
 
+            if(us.status !== "unblock"){
+                toast.error("account has been block!..")
+                return false;
+            }
+
             console.log("Successfully")
 
             localStorage.setItem("userid",us.id)
