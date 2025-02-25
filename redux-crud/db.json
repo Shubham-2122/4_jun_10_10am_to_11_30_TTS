@@ -1,0 +1,46 @@
+{
+    "users":[
+        {
+            "id":"1",
+            "name":"Het patel",
+            "email":"het@gmail.com",
+            "passowrd":"1234",
+            "phone":"35435234"
+        },
+        {
+            "id":"2",
+            "name":"varj patel",
+            "email":"varj@gmail.com",
+            "passowrd":"4321",
+            "phone":"35435234"
+        },
+        {
+            "id":"3",
+            "name":"Bhavik patel",
+            "email":"Bhavik@gmail.com",
+            "passowrd":"123456",
+            "phone":"35435234"
+        },
+        {
+            "id":"4",
+            "name":"dhaval patel",
+            "email":"dhaval@gmail.com",
+            "passowrd":"1234",
+            "phone":"35435234"
+        }
+    ],
+    "admin":[
+        {
+            "id":"1",
+            "name":"admin",
+            "email":"admin@gmail.com",
+            "password":"1234"
+        },
+        {
+            "id":"2",
+            "name":"admin2",
+            "email":"admin2@gmail.com",
+            "password":"1234"
+        }
+    ]
+}
